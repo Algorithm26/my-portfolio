@@ -1,4 +1,8 @@
+"use client"
+
 import { projects } from '@/contents/project'
+import { fadeInUp, scaleIn } from '@/utils/animations'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -7,9 +11,15 @@ import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
 const Projects = () => {
   return (
     <section className='py-20 container max-w-7xl mx-auto px-4'>
-        <h2 className='text-3xl font-bold mb-12 text-center'>Feature Projects</h2>
+        <motion.h2 
+        {...fadeInUp}
+        transition={{delay: 0.9}}
+        className='text-3xl font-bold mb-12 text-center'>Feature Projects</motion.h2>
 
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+        <motion.div 
+        {...scaleIn}
+        transition={{delay: 1.1}}
+        className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {
                 projects.map((project) => (
                     <article key={project.title} className='bg-white dark:bg-dark/50 rounded-lg shadow-md p-6'>
@@ -39,7 +49,7 @@ const Projects = () => {
                     </article>
                 ))
             }            
-        </div>
+        </motion.div>
     </section>
   )
 }
