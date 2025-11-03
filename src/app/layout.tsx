@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
+  title: "Supphakrit T. — Portfolio",
   description: "Supphakrit T. — Full Stack & Blockchain Developer",
 };
 
